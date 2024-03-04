@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1><a href = '/recipes/list'>Recipe Book</a></h1>
-    <h2>{{ object.name }}</h2>
+    <h2> Recipe for {{ object.name }}</h2>
     <p>
         <ul>
             {% for ingredient in object.ingredients.all %} 
             <li>
-                {{ ingredient.ingredient.name }}
+                {{ ingredient.quantity }} of {{ ingredient.ingredient.name }}
             </li>
             {% endfor %}
         </ul>
